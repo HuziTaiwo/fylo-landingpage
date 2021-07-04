@@ -40,11 +40,13 @@ header {
 }
 
 .links a {
-  color: hsl(0, 0%, 100%);
+  color: hsl(0, 0%, 80%);
   text-decoration: none;
+  transition: 0.5s ease-in-out;
 }
 
 .links a:hover {
+  color: hsl(0, 0%, 100%);
   text-decoration: underline;
 }
 
@@ -110,7 +112,7 @@ main {
 }
 
 .intro button:hover {
-  background: linear-gradient(to right, hsl(198, 60%, 50%), hsl(176, 68%, 64%));
+  background: hsl(176, 68%, 64%);
 }
 
 .service {
@@ -188,6 +190,7 @@ main {
 
 .work-description a:hover {
   border-color: transparent;
+  color: hsl(0, 0%, 100%);
 }
 
 @media (max-width: 900px) {
@@ -284,6 +287,11 @@ form input[type='text'] {
 form input[type='submit'] {
   background: linear-gradient(to right, hsl(176, 68%, 64%), hsl(198, 60%, 50%));
   color: hsl(0, 0%, 100%);
+  cursor: pointer;
+}
+
+form input[type='submit']:hover {
+  background: hsl(176, 68%, 64%);
 }
 
 @media (max-width: 900px) {
@@ -318,17 +326,26 @@ footer {
   align-self: flex-start;
 }
 
+.description h4 {
+  color: hsl(0, 0%, 80%);
+}
+
+.description h4:hover {
+  color: hsl(0, 0%, 100%);
+}
+
 .description li {
   list-style: none;
 }
 
 .description a {
-  color: hsl(0, 0%, 100%);
+  color: hsl(0, 0%, 80%);
   text-decoration: none;
 }
 
 .description a:hover {
   text-decoration: underline;
+  color: hsl(0, 0%, 100%);
 }
 
 .location {
@@ -344,13 +361,19 @@ footer {
   margin-bottom: 15px;
 }
 
-.social img {
-  filter: invert(1);
+.social svg {
   padding: 5px;
   width: 30px;
   height: 30px;
   border-radius: 50%;
-  border: 1px solid hsl(0, 0%, 0%);
+  border: 1px solid hsl(0, 0%, 100%);
+  transition: 0.5s ease-in-out;
+  cursor: pointer;
+}
+
+.social svg:hover {
+  color: hsl(198, 60%, 50%);
+  border: 1px solid hsl(198, 60%, 50%);
 }
 
 @media (max-width: 900px) {
